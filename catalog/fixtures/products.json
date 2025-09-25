@@ -1,0 +1,197 @@
+[
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "name": "Pygoscelis",
+    "category": 8,
+    "description": "brush-tailed penguins",
+    "depiction": "products/250px-Manchot_01_zH9FTvQ.jpg",
+    "price": "15000.00",
+    "created_at": "2025-09-24T22:12:07.530Z",
+    "updated_at": "2025-09-24T22:12:07.530Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "name": "Bubo scandiacus",
+    "category": 8,
+    "description": "large, white owl of the true owl family",
+    "depiction": "products/Bubo_scandiacus_GtNoNEj.jpg",
+    "price": "8500.00",
+    "created_at": "2025-09-24T22:12:51.362Z",
+    "updated_at": "2025-09-24T22:12:51.362Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "name": "Vultur gryphus",
+    "category": 8,
+    "description": "found in the Andes mountains and adjacent Pacific coasts of western South America",
+    "depiction": "products/Vultur_gryphus__5Pfb7Mh.jpg",
+    "price": "6500.00",
+    "created_at": "2025-09-24T22:13:38.585Z",
+    "updated_at": "2025-09-24T22:13:38.585Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "name": "Anseriformes",
+    "category": 8,
+    "description": "highly adapted for an aquatic existence at the water surface",
+    "depiction": "products/Anseriformes_IIbr7AA.jpg",
+    "price": "160.00",
+    "created_at": "2025-09-24T22:14:28.343Z",
+    "updated_at": "2025-09-24T22:14:28.343Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "name": "Capybara",
+    "category": 7,
+    "description": "largest living rodent",
+    "depiction": "products/Hydrochoeris_iD1iYUf.jpg",
+    "price": "1600.00",
+    "created_at": "2025-09-24T22:16:18.016Z",
+    "updated_at": "2025-09-24T22:16:18.016Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "name": "Leaf-nosed bat",
+    "category": 7,
+    "description": "elaborate outgrowth of skin on their noses, called a nose-leaf, which is believed to aid in echolocation",
+    "depiction": "products/Artibeus_sp_SH72v0z._Tortuguero_National_Park_crop.jpg",
+    "price": "760.00",
+    "created_at": "2025-09-24T22:18:03.637Z",
+    "updated_at": "2025-09-24T22:18:03.637Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "name": "Loxodonta africana",
+    "category": 7,
+    "description": "characterised by its long prehensile trunk with two finger-like processes; a convex back; large ears which help reduce body heat; and sturdy tusks that are noticeably curved. The skin is grey with scanty hairs, and bending cracks which support thermoregulation by retaining water.",
+    "depiction": "products/Loxodonta_africana_jVvIVrH.jpg",
+    "price": "10000.00",
+    "created_at": "2025-09-25T11:49:19.018Z",
+    "updated_at": "2025-09-25T11:49:19.018Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "name": "Xenohyla truncata",
+    "category": 5,
+    "description": "the only known frugivorous frog in the world",
+    "depiction": "products/Izecksohns_Brazilian_Tree_Frog.jpg",
+    "price": "100.00",
+    "created_at": "2025-09-25T11:52:17.902Z",
+    "updated_at": "2025-09-25T11:52:17.902Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "name": "Taricha granulosa",
+    "category": 5,
+    "description": "A stocky newt with rounded snout, it ranges from light brown to olive or brownish-black on top, with the underside, including the head, legs, and tail, a contrasting orange to yellow",
+    "depiction": "products/Taricha_granulosa_mTxWfQU.JPG",
+    "price": "500.00",
+    "created_at": "2025-09-25T11:53:42.301Z",
+    "updated_at": "2025-09-25T11:53:42.301Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "name": "Octopus cyanea",
+    "category": 3,
+    "description": "Living as it does on coral reefs, and hunting by day, O. cyanea is adept at camouflage and not only can change colour frequently, but also can change the patterns on and texture of its skin",
+    "depiction": "products/Octopus_cyanea_Maldives_ofxTPxt.JPG",
+    "price": "500.00",
+    "created_at": "2025-09-25T11:54:57.062Z",
+    "updated_at": "2025-09-25T11:54:57.062Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "name": "Crocodylus suchus",
+    "category": 6,
+    "description": "The coloration is generally brown to olive. Juveniles are paler, with black bandings, especially on the tail",
+    "depiction": "products/Crocodylus_suchus_gyLQzhW.jpg",
+    "price": "1100.00",
+    "created_at": "2025-09-25T11:56:22.491Z",
+    "updated_at": "2025-09-25T11:56:22.491Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "name": "Amanita muscaria",
+    "category": 10,
+    "description": "large white-gilled, white-spotted mushroom typically featuring a bright red cap covered with distinctive white warts",
+    "depiction": "",
+    "price": "12.00",
+    "created_at": "2025-09-25T12:41:10.089Z",
+    "updated_at": "2025-09-25T12:51:01.328Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+    "name": "Sarcoscypha coccinea",
+    "category": 10,
+    "description": "",
+    "depiction": "",
+    "price": "15.00",
+    "created_at": "2025-09-25T12:42:07.592Z",
+    "updated_at": "2025-09-25T12:42:07.592Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "name": "Penicillium",
+    "category": 10,
+    "description": "",
+    "depiction": "",
+    "price": "100.00",
+    "created_at": "2025-09-25T12:42:07.592Z",
+    "updated_at": "2025-09-25T12:42:07.592Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+    "name": "Omphalotus nidiformis",
+    "category": 10,
+    "description": "",
+    "depiction": "",
+    "price": "20.00",
+    "created_at": "2025-09-25T12:42:07.592Z",
+    "updated_at": "2025-09-25T12:42:07.592Z"
+  }
+}
+]
