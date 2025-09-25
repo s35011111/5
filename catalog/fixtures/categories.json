@@ -1,0 +1,102 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+    "name": "Serpentes",
+    "description": "Cladistically squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales much like other members of the group. Many species of snakes have skulls with several more joints than their lizard ancestors and relatives, enabling them to swallow prey much larger than their heads (cranial kinesis).",
+    "created_at": "2025-09-24T21:58:19.569Z",
+    "updated_at": "2025-09-24T21:58:19.569Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+    "name": "Arthropoda",
+    "description": "possess an exoskeleton with a cuticle made of chitin, often mineralised with calcium carbonate, a body with differentiated (metameric) segments, and paired jointed appendages.",
+    "created_at": "2025-09-24T21:58:53.198Z",
+    "updated_at": "2025-09-24T21:58:53.198Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 3,
+  "fields": {
+    "name": "Mollusca",
+    "description": "highly diverse, not just in size and anatomical structure, but also in behaviour and habitat, as numerous groups are freshwater and even terrestrial species",
+    "created_at": "2025-09-24T22:05:20.453Z",
+    "updated_at": "2025-09-24T22:05:20.453Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Chondrichthyes",
+    "description": "cartilaginous fish or chondrichthyans, which all have skeletons primarily composed of cartilage",
+    "created_at": "2025-09-24T22:05:52.942Z",
+    "updated_at": "2025-09-24T22:05:52.942Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 5,
+  "fields": {
+    "name": "Amphibia",
+    "description": "paraphyletic group encompassing all tetrapods, but excluding the amniotes",
+    "created_at": "2025-09-24T22:06:16.809Z",
+    "updated_at": "2025-09-24T22:06:16.809Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 6,
+  "fields": {
+    "name": "Reptile",
+    "description": "tetrapods with an ectothermic metabolism and amniotic development",
+    "created_at": "2025-09-24T22:06:43.291Z",
+    "updated_at": "2025-09-24T22:06:43.291Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 7,
+  "fields": {
+    "name": "Mammalia",
+    "description": "characterised by the presence of milk-producing mammary glands for feeding their young, a broad neocortex region of the brain, fur or hair, and three middle ear bones",
+    "created_at": "2025-09-24T22:07:05.940Z",
+    "updated_at": "2025-09-24T22:07:05.940Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 8,
+  "fields": {
+    "name": "Aves",
+    "description": "feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton",
+    "created_at": "2025-09-24T22:08:30.950Z",
+    "updated_at": "2025-09-24T22:08:30.950Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 9,
+  "fields": {
+    "name": "Virus",
+    "description": "submicroscopic infectious agent that replicates only inside the living cells",
+    "created_at": "2025-09-24T22:08:49.536Z",
+    "updated_at": "2025-09-24T22:08:49.536Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 10,
+  "fields": {
+    "name": "fungus",
+    "description": "they acquire their food by absorbing dissolved organic molecules, typically by secreting digestive enzymes into their environment",
+    "created_at": "2025-09-25T12:40:45.815Z",
+    "updated_at": "2025-09-25T12:40:45.815Z"
+  }
+}
+]
