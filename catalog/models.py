@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 from typing import Any
 
 from django.db import models
@@ -18,8 +18,6 @@ class Category(models.Model):
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
         ordering = ['name']
-''''''
-########################################################################
 
 ########################################################################
 class Product(models.Model):
@@ -38,7 +36,7 @@ class Product(models.Model):
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
         ordering = ['name']
-''''''
+
 
 
 
