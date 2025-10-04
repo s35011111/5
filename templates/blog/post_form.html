@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if object %}Edit{% else %}New{% endif %} Blog {% endblock %}
+
+{% block content %}
+<h1>{% if object %}Edit Post{% else %}Write New Post{% endif %}</h1>
+
+<form method="post" style="max-width: 600px;">
+    {% csrf_token %}
+
+    {% for field in form %}
+    <div style="margin-bottom: 1rem;">
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
+            {{ field.label }}
+        </label>
+        {{ field }}
+        {% if field.help_text %}
+        <small style="color: #666;">{{ field.help_text }}</small>
+        {% endif %}
+        {% if field.errors %}
+        <div style="color: red;">{{ field.errors }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    <div style="display: flex; gap: 1rem;">
+        <button type="submit" style="padding: 0.75rem 1.5rem; background: #007bff; color: white; border: none; border-radius: 4px;">
+            {% if object %}Update{% else %}Create{% endif %} Post
+        </button>
+        <a href="{% if object %}{% url 'post_detail' object.pk %}{% else %}{% url 'post_list' %}{% endif %}"
+           style="padding: 0.75rem 1.5rem; background: #6c757d; color: white; text-decoration: none; border-radius: 4px;">
+            Cancel
+        </a>
+    </div>
+</form>
+{% endblock %}
