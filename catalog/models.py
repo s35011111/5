@@ -1,6 +1,7 @@
 
 from typing import Any
 
+from django.core.exceptions import ValidationError
 from django.db import models
 
 # Create your models here.
@@ -37,6 +38,28 @@ class Product(models.Model):
         verbose_name_plural = 'Products'
         ordering = ['name']
 
+    def clean(self):
+        errors = {}
+        if self._contains_prohibited_words(self.name):
+            errors['name'] = 'Product name contains prohibited words.'
+        if self._contains_prohibited_words(self.description):
+            errors['description'] = 'Description contains prohibited words.'
+        if self.price <= 0:
+            errors['price'] = 'Price must be positive.'
+        if errors:
+            raise ValidationError(errors)
+
+
+    def _contains_prohibited_words(self, text):
+        prohibited_words = ["казино",    "криптовалюта",    "крипта",    "биржа",    "дешево",
+        "бесплатно",    "обман",    "полиция",    "радар"]
+        text_lower = text.lower()
+        return any(prohibited_word in text_lower for prohibited_word in prohibited_words)
+
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
 
 
 
