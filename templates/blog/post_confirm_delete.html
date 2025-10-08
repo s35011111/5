@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}delete post {% endblock %}
+
+{% block content %}
+
+<h1>delete</h1>
+<p>r u sure to delete "{{object.title}}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" style="background: red; color: white; padding: 0.5rem 1rem; border:none">
+        delete
+    </button>
+    <a href="{% url 'post_detail' object.pk %}" style="padding: 0.5rem 1rem; background: gray; color: white; text-decoration:none;">
+        cancel
+    </a>
+
+</form>
+{% endblock %}
