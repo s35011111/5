@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Register</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% for field in form %}
+    <div>
+        <label>{{ field.label }}:</label><br>
+        {{ field }}
+        {% if field.errors %}
+        <div>
+            {% for error in field.errors %}
+            <div>{{ error }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+<div>
+<p>
+
+</p>
+</div>
+
+    <button class="w-10 btn btn-lg btn-outline-primary" type="submit">Register</button>
+</form>
+<p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+{% endblock %}

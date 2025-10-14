@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Login</h2>
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+
+    <div>
+        <div>
+        <label>Username:</label>
+        </div>
+        <div>
+        {{ form.username }}
+        </div>
+    </div>
+<div>
+    <p>
+
+    </p>
+</div>
+    <div>
+        <div>
+        <label>Password:</label>
+        </div>
+        <div>
+        {{ form.password }}
+        </div>
+    </div>
+<div>
+    <p>
+
+    </p>
+</div>
+
+    <button class="w-10 btn btn-lg btn-outline-primary" type="submit">Login</button>
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+
+<p>Don't have an account? <a href="{% url 'users:register' %}">Register here</a></p>
+{% endblock %}
