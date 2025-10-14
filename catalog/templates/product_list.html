@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Список товаров{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">Список товаров</h1>
+
+        <!-- Optional: Add a toggle button to switch between views -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <p class="mb-0 text-muted">Showing {{ products|length }} products</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        {% for product in products %}
+        <div class="card mb-4 shadow-sm">
+            <div class="row g-0">
+                <!-- Image Column -->
+                <div class="col-md-4">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="{{ product.name }}" style="width: 100%; height: 250px; object-fit: cover;">
+                    {% else %}
+                        <div class="d-flex align-items-center justify-content-center bg-light rounded-start" style="width: 100%; height: 250px;">
+                            <span class="text-muted">No Image Available</span>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-md-8">
+                    <div class="card-body h-100 d-flex flex-column">
+                        <div class="mb-2">
+                            <span class="badge bg-secondary">{{ product.category.name }}</span>
+                        </div>
+
+                        <h3 class="card-title">{{ product.name }}</h3>
+
+
+
+                        <p class="card-text flex-grow-1">
+                            {% if product.description %}
+                                {{ product.description|truncatewords:20 }}
+                            {% else %}
+                                <em class="text-muted">No description available</em>
+                            {% endif %}
+                        </p>
+
+                        <div class="mt-auto">
+                            <div class="row align-items-center">
+
+                                <div class="col-auto">
+                                    <a href="{% url 'product_detail' product.id %}" class="btn btn-primary">View Details</a>
+                                    <a href="#" class="btn btn-outline-secondary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info text-center">
+                <h4>No products available</h4>
+                <p class="mb-0">Check back later for new products!</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} {% endblock %}
+
+{% block content %}
+<article>
+
+    <header style="margin-bottom: 2rem;">
+        <h1>{{ post.title }}</h1>
+        <div style="color: #666; font-size: 0.9rem;">
+            By {{ post.author.username }} | {{ post.created_at|date:"F j, Y" }} |
+            Views: {{ post.view_count }}
+        </div>
+
+
+        {% if user == post.author %}
+        <div style="margin-top: 1rem;">
+            <a href="{% url 'post_update' post.pk %}" style="padding: 0.5rem 1rem; background: #ffc107; color: black; text-decoration: none; border-radius: 4px; margin-right: 0.5rem;">
+                Edit
+            </a>
+            <a href="{% url 'post_delete' post.pk %}" style="padding: 0.5rem 1rem; background: #dc3545; color: white; text-decoration: none; border-radius: 4px;">
+                Delete
+            </a>
+        </div>
+        {% endif %}
+    </header>
+
+
+    <div style="line-height: 1.6; margin-bottom: 3rem;">
+        {{ post.content|linebreaks }}
+    </div>
+
+
+
+    <div style="margin-top: 2rem;">
+        <a href="{% url 'post_list' %}" style="padding: 0.5rem 1rem; background: #6c757d; color: white; text-decoration: none; border-radius: 4px;">
+            ← Back to Blog
+        </a>
+    </div>
+</article>
+{% endblock %}
