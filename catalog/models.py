@@ -1,6 +1,7 @@
 
 from typing import Any
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -30,6 +31,9 @@ class Product(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
 
+    owner=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,related_name='products')
+    published=models.BooleanField(default=False)
+
     def __str__(self: Any) -> str:
         return self.name
 
@@ -37,6 +41,7 @@ class Product(models.Model):
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
         ordering = ['name']
+        permissions=[("can_unpublish_product","Can unpublish product")]
 
     def clean(self):
         errors = {}

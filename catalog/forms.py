@@ -51,3 +51,14 @@ class ProductForm(forms.ModelForm):
                             "бесплатно",    "обман",    "полиция",    "радар"]
         text_lower = text.lower()
         return any(prohibited_word in text_lower for prohibited_word in prohibited_words)
+
+
+class ProductModeratorForm(ProductForm):
+    class Meta(ProductForm.Meta):
+        fields = ProductForm.Meta.fields + ['published']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['published'].label = "Publish this product"
+
+

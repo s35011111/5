@@ -1,0 +1,102 @@
+[
+{
+  "model": "users.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$BcmxwduapLta78mglO7t7F$HaN/uN+U3EBs/0FBCM2HC4RGpg0j55sFat1swaY1tNU=",
+    "last_login": "2025-10-16T14:26:12.557Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-14T12:53:08.243Z",
+    "email": "",
+    "phone": null,
+    "picture": "",
+    "country": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$dyAotTAN2flbKf4SDYIxLk$WCSNr9e6cCILEkxnaGVfsZJwXBWwLwBKeNj/3TfwdX4=",
+    "last_login": "2025-10-14T13:19:06.848Z",
+    "is_superuser": false,
+    "username": "1",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-14T13:13:37.050Z",
+    "email": "",
+    "phone": null,
+    "picture": "",
+    "country": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.customuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$DRSyAm3f019Ft3swiImrqT$SjiQVfYfb+naoDRdJT9DO1a3skvZZ5mUpyU83lqcOP4=",
+    "last_login": "2025-10-16T14:17:47.879Z",
+    "is_superuser": false,
+    "username": "2",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-14T13:35:07Z",
+    "email": "2@2.com",
+    "phone": null,
+    "picture": "",
+    "country": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.customuser",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$lowmsu1oFJ7amQAFq0OGHS$I7SzDokE94nj1wG2WhnLAeFukrhk3IUYHnomu2Jw5nQ=",
+    "last_login": "2025-10-16T14:18:41.751Z",
+    "is_superuser": false,
+    "username": "3",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-14T13:58:58.273Z",
+    "email": "3@2.com",
+    "phone": null,
+    "picture": "",
+    "country": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Product moderator",
+    "permissions": [
+      29,
+      37,
+      30,
+      31,
+      32
+    ]
+  }
+}
+]

@@ -1,13 +1,9 @@
 from django.conf.urls.static import static
 from django.urls import path
-
 from config import settings
 from . import views
 
-from django.urls import path
-from . import views
 
-# For function-based views
 urlpatterns = [
     path('', views.HomePageView.as_view(), name='home'),
     path('product_list/', views.ProductListView.as_view(), name='product_list'),

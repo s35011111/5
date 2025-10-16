@@ -18,11 +18,12 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'price', 'category']
-    list_filter = ['category']
+    list_display = ['id', 'name', 'price', 'category','owner','published']
+    list_filter = ['category','published','owner']
     search_fields = ['name', 'description']
     autocomplete_fields = ['category']
-    list_editable = ['price']
+    list_editable = ['price','published']
+    actions = ['publish_products','unpublish_products']
     list_per_page = 20
     ordering = ['name']
 
