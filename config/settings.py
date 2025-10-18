@@ -150,3 +150,23 @@ LOGIN_URL = 'login'
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST='localhost'
 EMAIL_PORT= 587
+
+CACHE_ENABLED = os.environ.get('CACHE_ENABLED', 'True').lower() == 'true'
+
+if CACHE_ENABLED:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1'),
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            }
+        }
+    }
+else:
+
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        }
+    }

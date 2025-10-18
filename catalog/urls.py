@@ -15,6 +15,10 @@ urlpatterns = [
     path('<int:pk>/update/', views.ProductUpdateView.as_view(), name='product_update'),
     path('<int:pk>/delete/', views.ProductDeleteView.as_view(), name='product_delete'),
 
+    path('cache_test/', views.cache_test, name='cache_test'),
+    path('product_filter/', views.product_list_by_id, name='product_filter'),
+    path('product_filter/<int:category_id>/', views.product_list_by_id, name='product_filtered'),
+
 ]
 
 if settings.DEBUG:
