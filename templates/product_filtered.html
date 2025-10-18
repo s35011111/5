@@ -1,0 +1,56 @@
+    {% extends 'base.html' %}
+
+{% block title %}product_filter{% endblock %}
+
+{% block content %}
+<h1>Our Products</h1>
+
+    <!-- Category Navigation -->
+    <div class="categories">
+        <h3>Filter by Category:</h3>
+        <ul>
+            <li><a href="{% url 'product_list' %}">All Products</a></li>
+            {% for category in categories %}
+                <li>
+                    <a href="{% url 'product_filtered' category.id %}"
+                       {% if current_category_id == category.id %}class="active"{% endif %}>
+                        {{ category.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+
+    <!-- Products Display -->
+    <div class="products">
+        <h2>
+            {% if current_filter %}
+                {{ current_filter }}
+            {% elif current_category_id %}
+                {% for category in categories %}
+                    {% if category.id == current_category_id %}
+                        Products in {{ category.name }}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                All Products
+            {% endif %}
+            ({{ products.count }})
+        </h2>
+
+        {% if products %}
+            <div class="product-grid">
+                {% for product in products %}
+                    <div class="product-card">
+                        <h3>{{ product.name }}</h3>
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-primary">View Details</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No products found.</p>
+        {% endif %}
+    </div>
+{% endblock %}

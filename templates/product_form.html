@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{% if object %}Update{% else %}Create{% endif %} Product</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+    <div class="mb-3">
+        <label>Product Name:</label><br>
+        {{ form.name }}
+        {% if form.name.errors %}
+        <div class="text-danger">
+            {% for error in form.name.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Product Category:</label><br>
+        {{ form.category }}
+        {% if form.category.errors %}
+        <div class="text-danger">
+            {% for error in form.category.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Product Owner:</label><br>
+        {{ object.owner.username }}
+        {% if form.owner.errors %}
+        <div class="text-danger">
+            {% for error in form.owner.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+
+    <div class="mb-3">
+        <label>Description:</label><br>
+        {{ form.description }}
+        {% if form.description.errors %}
+        <div class="text-danger">
+            {% for error in form.description.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Price:</label><br>
+        {{ form.price }}
+        {% if form.price.errors %}
+        <div class="text-danger">
+            {% for error in form.price.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Image:</label><br>
+        {{ form.image }}
+        {% if form.image.errors %}
+        <div class="text-danger">
+            {% for error in form.image.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+
+    {% if form.published %}
+    <div style="background: #f0f8ff; padding: 15px; border-radius: 5px; margin: 15px 0;">
+        <h3>Moderation</h3>
+        <div>
+            <label>
+                {{ form.published }}
+                Publish this product
+            </label>
+
+        </div>
+    </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary">
+            {% if object %}Update{% else %}Create{% endif %} Product
+        </button>
+    <a href="{% url 'product_list' %}" class="btn btn-secondary">Cancel</a>
+
+</form>
+
+
+{% if object %}
+<div style="margin-top: 20px; padding: 10px; background: #f9f9f9;">
+    <strong>Current Status:</strong>
+    {% if object.published %}
+        <span style="color: green;">✅ Published</span>
+    {% else %}
+        <span style="color: orange;">⏳ Awaiting Moderation</span>
+    {% endif %}
+</div>
+{% endif %}
+<style>
+    /* Style form fields to show errors */
+    input:invalid, textarea:invalid {
+        border-color: #dc3545;
+    }
+    input:valid, textarea:valid {
+        border-color: #198754;
+    }
+</style>
+{% endblock %}
